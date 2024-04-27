@@ -1,5 +1,11 @@
 # MariaDB
 
+## Installation
+
+```bash
+$ sudo apt-get install mariadb-server
+```
+
 ## Cara Melihat Semua User
 
 ```bash
@@ -18,10 +24,22 @@ CREATE USER 'username'@'localhost' IDENTIFIED BY 'password';
 ALTER USER 'username'@'localhost' IDENTIFIED BY 'password';
 ```
 
+## Hapus User
+
+```bash
+DROP USER 'username'@'localhost';
+```
+
+## Create Database
+
+```bash
+CREATE DATABASE whatsapp;
+```
+
 ## Cara Memberikan Hak Akses User ke Database
 
 ```bash
-GRANT ALL PRIVILEGES ON database.* TO 'username'@'localhost' WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON profas.* TO 'profas'@'%' WITH GRANT OPTION;
 ```
 
 ## Cara Refresh/Flush Hak Akses
