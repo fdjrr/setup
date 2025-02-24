@@ -47,8 +47,8 @@ $ vault write database/config/demo-database \
 plugin_name=mysql-database-plugin \
 connection_url="{{username}}:{{password}}@tcp(127.0.0.1:3306)/" \
 allowed_roles="*" \
-username="root" \
-password="root"
+username="" \
+password=""
 ```
 
 ### Membuat Database Role (Admin)
