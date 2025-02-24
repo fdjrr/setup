@@ -4,6 +4,16 @@
 
 ```bash
 $ vault operator init
+
+Example :
+
+Unseal Key 1: od7Nx9oLQLVgWaGuqXsZhjFn6bhP3CJvIxpC5Isywlsz
+Unseal Key 2: LGvkGXqlXvO1O22d4RIgQBzyiOTv7YoEsJ7tsapTh+Jc
+Unseal Key 3: snRchWtzgaCiC6MqoBxElIgiiJBFR6vG8LTSK6eg+XXR
+Unseal Key 4: IUhsRdsMQcTjYymy/T04sfL5scHuX8+u6lc/x5QhOLUW
+Unseal Key 5: W/OOlCYNJ/on3edweWxVz/Fhlq5IJ7t1ZiQIlFuQVpE7
+
+Initial Root Token: hvs.etQY5oTYEZFVcVL7L0Xeahus
 ```
 
 ## KV Secrets Engine
@@ -12,7 +22,7 @@ $ vault operator init
 $ vault secrets enable -path=my-secret/ kv
 $ vault secrets list
 
-$ vault kv put my-secret/demo-api-token token-name= token-secret=
+$ vault kv put my-secret/demo-api-token token-name=demo-api-token token-secret=SuperSecret
 $ vault kv get my-secret/demo-api-token
 
 $ vault kv --help
@@ -47,8 +57,8 @@ $ vault write database/config/demo-database \
 plugin_name=mysql-database-plugin \
 connection_url="{{username}}:{{password}}@tcp(127.0.0.1:3306)/" \
 allowed_roles="*" \
-username="" \
-password=""
+username="root" \
+password="root"
 ```
 
 ### Membuat Database Role (Admin)
