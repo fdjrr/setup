@@ -12,7 +12,7 @@ $ vault operator init
 $ vault secrets enable -path=my-secret/ kv
 $ vault secrets list
 
-$ vault kv put my-secret/demo-api-token token-name=demo-api-token token-secret=SuperSecret
+$ vault kv put my-secret/demo-api-token token-name= token-secret=
 $ vault kv get my-secret/demo-api-token
 
 $ vault kv --help
