@@ -7,13 +7,13 @@ $ vault operator init
 
 Example :
 
-Unseal Key 1: od7Nx9oLQLVgWaGuqXsZhjFn6bhP3CJvIxpC5Isywlsz
-Unseal Key 2: LGvkGXqlXvO1O22d4RIgQBzyiOTv7YoEsJ7tsapTh+Jc
-Unseal Key 3: snRchWtzgaCiC6MqoBxElIgiiJBFR6vG8LTSK6eg+XXR
-Unseal Key 4: IUhsRdsMQcTjYymy/T04sfL5scHuX8+u6lc/x5QhOLUW
-Unseal Key 5: W/OOlCYNJ/on3edweWxVz/Fhlq5IJ7t1ZiQIlFuQVpE7
+Unseal Key 1:
+Unseal Key 2:
+Unseal Key 3:
+Unseal Key 4:
+Unseal Key 5:
 
-Initial Root Token: hvs.etQY5oTYEZFVcVL7L0Xeahus
+Initial Root Token:
 ```
 
 ## KV Secrets Engine
