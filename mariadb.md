@@ -33,13 +33,13 @@ DROP USER 'username'@'localhost';
 ## Create Database
 
 ```bash
-CREATE DATABASE whatsapp;
+CREATE DATABASE demo;
 ```
 
 ## Cara Memberikan Hak Akses User ke Database
 
 ```bash
-GRANT ALL PRIVILEGES ON profas.* TO 'profas'@'%' WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON demo.* TO 'username'@'%' WITH GRANT OPTION;
 ```
 
 ## Cara Refresh/Flush Hak Akses
