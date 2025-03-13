@@ -1,0 +1,28 @@
+services:
+  roundcube:
+    image: roundcube/roundcubemail:latest
+    container_name: roundcube-web
+    restart: unless-stopped
+    environment:
+      ROUNDCUBEMAIL_DB_TYPE: mysql
+      ROUNDCUBEMAIL_DB_HOST: mariadb
+      ROUNDCUBEMAIL_DB_USER: roundcube
+      ROUNDCUBEMAIL_DB_PASSWORD: roundcube
+      ROUNDCUBEMAIL_DB_NAME: roundcube
+      ROUNDCUBEMAIL_SMTP_SERVER: ssl://
+      ROUNDCUBEMAIL_SMTP_PORT: 465
+      ROUNDCUBEMAIL_DEFAULT_HOST: 
+    ports:
+      - "1080:80"
+    volumes:
+      - roundcube-data:/var/www/html
+      - ./config/config.inc.php:/var/www/html/config/config.inc.php
+    networks:
+      - homelabs
+
+volumes:
+  roundcube-data:
+
+networks:
+  homelabs:
+    external: true

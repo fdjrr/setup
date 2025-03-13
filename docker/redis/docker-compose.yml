@@ -7,6 +7,12 @@ services:
     volumes:
       - redis_data:/data
     command: redis-server --appendonly yes
+    networks:
+      - homelabs
 
 volumes:
   redis_data:
+
+networks:
+  homelabs:
+    external: true
